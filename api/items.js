@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   const limit = req.query.limit || 50;
 
   // status_discount=true => chỉ lấy sản phẩm đang giảm giá
-  const url = 'https://api.accesstrade.vn/v1/datafeeds?domain=shopee.vn&status_discount=true&page=' + page + '&limit=' + limit;
+  const url = 'https://api.accesstrade.vn/v1/datafeeds?domain=shopee.vn&page=' + page + '&limit=' + limit;
 
   try {
     const r = await fetch(url, {
