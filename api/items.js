@@ -2,54 +2,57 @@ export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
 
   const TOKEN = process.env.AT_TOKEN;
-  if (!TOKEN) return res.status(500).json({ items: [], error: 'missing_token' });
+  if (!TOKEN) return res.status(500).json({ products: [], error: 'missing_token' });
 
-  const H = { 'Authorization': 'Token ' + TOKEN, 'Content-Type': 'application/json' };
+  const AFF_ID = '17310760448';            // 👈 ID Shopee Affiliate của BẠN
+  const SUB    = 'sansale';
+  const page   = req.query.page  || 1;
+  const limit  = req.query.limit || 100;
+  const MIN    = Number(req.query.min) || 0; // ngưỡng % giảm tối thiểu (mặc định 0)
 
-  // ===== Chế độ chẩn đoán: mở ?src=diag =====
-  if (req.query.src === 'diag') {
-    const tests = {
-      datafeed:   'https://api.accesstrade.vn/v1/datafeeds?domain=shopee.vn&limit=2',
-      campaigns:  'https://api.accesstrade.vn/v1/campaigns?limit=2',
-      coupon_hot: 'https://api.accesstrade.vn/v1/offers_informations/coupon_hot?date=1&limit=2',
-      coupon:     'https://api.accesstrade.vn/v1/offers_informations/coupon?limit=2'
-    };
-    const report = {};
-    await Promise.all(Object.keys(tests).map(async function (k) {
-      try {
-        const r = await fetch(tests[k], { headers: H });
-        const text = await r.text();
-        report[k] = { status: r.status, body: text.slice(0, 200) };
-      } catch (e) {
-        report[k] = { status: 'fetch_failed', body: String(e) };
-      }
-    }));
-    return res.status(200).json({ token_tail: TOKEN.slice(-4), report });
+  const url = 'https://api.accesstrade.vn/v1/datafeeds?domain=shopee.vn&page=' + page + '&limit=' + limit;
+
+  // Bóc link gốc Shopee từ dữ liệu datafeed
+  function rawShopeeUrl(p) {
+    if (p.url && p.url.indexOf('shopee') >= 0) return p.url;
+    const m = (p.aff_link || '').match(/[?&]url=([^&]+)/);
+    if (m) { try { return decodeURIComponent(m[1]); } catch (e) { return m[1]; } }
+    return p.url || '';
+  }
+  // Tạo link affiliate bằng ID của bạn
+  function myAff(shopeeUrl) {
+    return 'https://s.shopee.vn/an_redir?origin_link=' + encodeURIComponent(shopeeUrl)
+      + '&affiliate_id=' + AFF_ID + '&sub_id=' + SUB;
   }
 
-  // ===== Bình thường: lấy mã giảm giá =====
-  const page  = req.query.page  || 1;
-  const limit = req.query.limit || 50;
-  const url = 'https://api.accesstrade.vn/v1/offers_informations/coupon_hot?date=1&limit=' + limit;
-
   try {
-    const r = await fetch(url, { headers: H });
+    const r = await fetch(url, { headers: { 'Authorization': 'Token ' + TOKEN, 'Content-Type': 'application/json' } });
     const raw = await r.json();
-    let list = [];
-    if (raw && raw.data && Array.isArray(raw.data.data)) list = raw.data.data;
-    else if (raw && Array.isArray(raw.data)) list = raw.data;
+    const list = Array.isArray(raw.data) ? raw.data : [];
 
-    const items = list.map(function (c) {
-      const cp = (c.coupons && c.coupons[0]) ? c.coupons[0] : {};
+    const products = list.map(function (p) {
+      const price = Number(p.price) || 0;
+      const disc  = Number(p.discount) || 0;
+      let   rate  = Number(p.discount_rate) || 0;
+      let final = price;
+      if (disc > 0 && disc < price && disc >= price * 0.1) final = disc;
+      else if (rate > 0 && rate < 100) final = Math.round(price * (1 - rate / 100));
+      if (!rate && price > 0 && final < price) rate = Math.round((1 - final / price) * 100);
+
       return {
-        name: c.name || '', content: c.content || '', image: c.image || '',
-        code: cp.coupon_code || '', link: c.prod_link || c.link || '',
-        discountValue: Number(c.discount_value) || 0, discountPct: Number(c.discount_percentage) || 0,
-        minSpend: Number(c.min_spend) || 0, timeLeft: c.time_left || '', isHot: String(c.is_hot) === 'True'
+        title: p.name,
+        image: p.image,
+        link:  myAff(rawShopeeUrl(p)),   // 👈 link của CHÍNH BẠN
+        price: price,
+        final: final,
+        rate:  (final < price ? rate : 0)
       };
-    });
-    return res.status(200).json({ items: items, upstream: r.status });
+    })
+    .filter(function (p) { return p.rate >= MIN; })
+    .sort(function (a, b) { return b.rate - a.rate; });   // giảm nhiều nhất lên đầu
+
+    return res.status(200).json({ products: products, total: products.length, upstream: r.status });
   } catch (e) {
-    return res.status(502).json({ items: [], error: 'fetch_failed', message: String(e) });
+    return res.status(502).json({ products: [], error: 'fetch_failed', message: String(e) });
   }
 }
