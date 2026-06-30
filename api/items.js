@@ -1,58 +1,63 @@
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
 
-  const TOKEN = process.env.AT_TOKEN;
-  if (!TOKEN) return res.status(500).json({ products: [], error: 'missing_token' });
+  const AFF_ID = '17310760448';
+  const SUB    = 'flashsale';
+  const limit  = Number(req.query.limit) || 50;
 
-  const AFF_ID = '17310760448';            // 👈 ID Shopee Affiliate của BẠN
-  const SUB    = 'sansale';
-  const page   = req.query.page  || 1;
-  const limit  = req.query.limit || 100;
-  const MIN    = Number(req.query.min) || 0; // ngưỡng % giảm tối thiểu (mặc định 0)
+  const H = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+    'Accept': 'application/json',
+    'x-api-source': 'pc',
+    'x-shopee-language': 'vi',
+    'Referer': 'https://shopee.vn/flash_sale',
+    'Content-Type': 'application/json'
+  };
 
-  const url = 'https://api.accesstrade.vn/v1/datafeeds?domain=shopee.vn&page=' + page + '&limit=' + limit;
-
-  // Bóc link gốc Shopee từ dữ liệu datafeed
-  function rawShopeeUrl(p) {
-    if (p.url && p.url.indexOf('shopee') >= 0) return p.url;
-    const m = (p.aff_link || '').match(/[?&]url=([^&]+)/);
-    if (m) { try { return decodeURIComponent(m[1]); } catch (e) { return m[1]; } }
-    return p.url || '';
-  }
-  // Tạo link affiliate bằng ID của bạn
-  function myAff(shopeeUrl) {
-    return 'https://s.shopee.vn/an_redir?origin_link=' + encodeURIComponent(shopeeUrl)
-      + '&affiliate_id=' + AFF_ID + '&sub_id=' + SUB;
-  }
+  const img   = function (h) { return h ? ('https://cf.shopee.vn/file/' + h) : ''; };
+  const myAff = function (u) { return 'https://s.shopee.vn/an_redir?origin_link=' + encodeURIComponent(u) + '&affiliate_id=' + AFF_ID + '&sub_id=' + SUB; };
 
   try {
-    const r = await fetch(url, { headers: { 'Authorization': 'Token ' + TOKEN, 'Content-Type': 'application/json' } });
-    const raw = await r.json();
-    const list = Array.isArray(raw.data) ? raw.data : [];
+    // 1) Lấy danh sách khung giờ flash sale
+    const sRes = await fetch('https://shopee.vn/api/v4/flash_sale/get_all_sessions?category_personalization_type=0', { headers: H });
+    if (!sRes.ok) return res.status(200).json({ products: [], error: 'sessions_blocked', upstream: sRes.status });
+    const sJson = await sRes.json();
+    const sessions = (sJson.data && sJson.data.sessions) || [];
+    if (!sessions.length) return res.status(200).json({ products: [], error: 'no_sessions', topKeys: Object.keys(sJson || {}), sample: JSON.stringify(sJson).slice(0, 300) });
 
-    const products = list.map(function (p) {
-      const price = Number(p.price) || 0;
-      const disc  = Number(p.discount) || 0;
-      let   rate  = Number(p.discount_rate) || 0;
-      let final = price;
-      if (disc > 0 && disc < price && disc >= price * 0.1) final = disc;
-      else if (rate > 0 && rate < 100) final = Math.round(price * (1 - rate / 100));
-      if (!rate && price > 0 && final < price) rate = Math.round((1 - final / price) * 100);
+    // Chọn khung ĐANG diễn ra, không có thì lấy khung đầu danh sách
+    const now = Math.floor(Date.now() / 1000);
+    const session = sessions.find(function (s) { return s.start_time <= now && now < s.end_time; }) || sessions[0];
+    const promoId = session.promotionid;
 
+    // 2) Lấy sản phẩm trong khung đó
+    const iRes = await fetch('https://shopee.vn/api/v4/flash_sale/flash_sale_batch_get_items', {
+      method: 'POST', headers: H,
+      body: JSON.stringify({ promotionid: promoId, limit: limit, offset: 0, with_dp_items: true })
+    });
+    if (!iRes.ok) return res.status(200).json({ products: [], error: 'items_blocked', upstream: iRes.status, promoId: promoId });
+    const iJson = await iRes.json();
+    const items = (iJson.data && iJson.data.items) || [];
+
+    const products = items.map(function (it) {
+      const price = (Number(it.price_before_discount) || 0) / 100000;  // giá Shopee ×100000
+      const final = (Number(it.price) || 0) / 100000;
+      const rate  = Number(it.raw_discount) || (price > 0 ? Math.round((1 - final / price) * 100) : 0);
+      const url   = 'https://shopee.vn/product/' + it.shopid + '/' + it.itemid;
       return {
-        title: p.name,
-        image: p.image,
-        link:  myAff(rawShopeeUrl(p)),   // 👈 link của CHÍNH BẠN
-        price: price,
-        final: final,
-        rate:  (final < price ? rate : 0)
+        title: it.name,
+        image: img(it.image),
+        link:  myAff(url),                 // 👈 link ID của BẠN
+        price: Math.round(price),
+        final: Math.round(final),
+        rate:  rate,
+        stock: it.stock,
+        sold:  it.sold
       };
-    })
-    .filter(function (p) { return p.rate >= MIN; })
-    .sort(function (a, b) { return b.rate - a.rate; });   // giảm nhiều nhất lên đầu
+    }).sort(function (a, b) { return b.rate - a.rate; });
 
-    return res.status(200).json({ products: products, total: products.length, upstream: r.status });
+    return res.status(200).json({ products: products, total: products.length, promoId: promoId });
   } catch (e) {
-    return res.status(502).json({ products: [], error: 'fetch_failed', message: String(e) });
+    return res.status(200).json({ products: [], error: 'fetch_failed', message: String(e) });
   }
 }
