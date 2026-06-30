@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mã Giảm Giá Shopee · Nghiện Sale</title>
+<title>Săn Sale Shopee · Nghiện Sale</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -13,145 +13,103 @@
     background:radial-gradient(circle at 20% 20%,#1f1f2e,#0f0f1a) fixed;min-height:100vh}
   .sticky{position:sticky;top:0;z-index:20;background:rgba(15,15,26,.85);backdrop-filter:blur(12px);margin:0 -14px;padding:0 14px}
   .topbar{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 2px 4px}
-  .brand{font-size:21px;font-weight:800;background:linear-gradient(90deg,#ff4d2d,#ff8a65);
-    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .brand{font-size:21px;font-weight:800;background:linear-gradient(90deg,#ff4d2d,#ff8a65);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
   .sub{max-width:1000px;margin:0 auto;color:var(--muted);font-size:12.5px;padding:0 2px 8px}
   .icon-btn{background:var(--glass);border:1px solid var(--ring);color:#fff;width:40px;height:40px;border-radius:999px;cursor:pointer;font-size:16px}
-  .searchbar{max-width:1000px;margin:0 auto;display:flex;gap:8px;padding-bottom:12px}
+  .searchbar{max-width:1000px;margin:0 auto;display:flex;gap:8px;padding-bottom:8px}
   .searchbar input{flex:1;padding:12px 16px;border-radius:999px;border:1px solid var(--ring);background:var(--glass);color:#fff;font-size:14px;outline:none}
   .searchbar input::placeholder{color:rgba(255,255,255,.45)}
+  .chips{max-width:1000px;margin:0 auto;display:flex;gap:8px;padding-bottom:12px;overflow-x:auto}
+  .chip{padding:7px 16px;border-radius:999px;border:1px solid var(--ring);background:var(--glass);color:var(--muted);font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+  .chip.on{background:linear-gradient(135deg,#ff4d2d,#ff8a65);color:#fff;border-color:transparent}
   .status{max-width:1000px;margin:12px auto 10px;color:var(--muted);font-size:13px;text-align:center}
-  .grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
-  .vc{background:var(--glass);border:1px solid var(--ring);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,border-color .15s}
-  .vc:hover{transform:translateY(-3px);border-color:rgba(255,138,101,.5)}
-  .vtop{position:relative;width:100%;height:120px;background:#1a1a28}
-  .vtop img{width:100%;height:100%;object-fit:cover}
-  .hot{position:absolute;top:8px;left:8px;background:linear-gradient(135deg,#ff4d2d,#ff8a65);color:#fff;font-size:11px;font-weight:800;padding:3px 9px;border-radius:8px}
-  .vbody{padding:12px;display:flex;flex-direction:column;gap:8px;flex:1}
-  .vname{font-size:14px;font-weight:700;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-  .vdeal{font-size:15px;font-weight:800;color:var(--gold)}
-  .vcond{font-size:12px;color:var(--muted)}
-  .vcode{display:flex;align-items:center;gap:6px;border:1px dashed var(--ring);border-radius:10px;padding:7px 10px;background:rgba(255,255,255,.03)}
-  .vcode .code{flex:1;font-weight:800;letter-spacing:.5px;font-size:13px}
-  .vcode button{border:none;background:rgba(255,138,101,.2);color:#ff8a65;font-weight:700;font-size:12px;padding:5px 10px;border-radius:8px;cursor:pointer}
-  .vcode button.copied{background:#4cd97b;color:#062}
-  .vtime{font-size:11px;color:var(--muted)}
-  .cta{margin-top:auto;padding:11px;border:none;border-radius:10px;font-weight:800;font-size:14px;color:#fff;background:linear-gradient(135deg,#ff4d2d,#ff8a65);cursor:pointer;text-align:center}
-  .cta:active{transform:scale(.97)}
+  .grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+  .card{background:var(--glass);border:1px solid var(--ring);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,border-color .15s}
+  .card:hover{transform:translateY(-3px);border-color:rgba(255,138,101,.5)}
+  .thumb-wrap{position:relative;width:100%;aspect-ratio:1/1;background:#1a1a28}
+  .thumb{width:100%;height:100%;object-fit:cover}
+  .badge{position:absolute;top:8px;left:8px;background:linear-gradient(135deg,#ff4d2d,#ff8a65);color:#fff;font-size:12px;font-weight:800;padding:4px 9px;border-radius:8px;box-shadow:0 2px 8px rgba(255,77,45,.5)}
+  .body{padding:10px;display:flex;flex-direction:column;gap:7px;flex:1}
+  .name{font-size:13px;font-weight:600;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:36px}
+  .price{font-size:16px;font-weight:800;color:var(--gold)}
+  .price .old{font-size:11px;font-weight:500;color:var(--muted);text-decoration:line-through;margin-left:6px}
+  .buy-btn{margin-top:auto;padding:11px;border:none;border-radius:10px;font-weight:800;font-size:14px;color:#fff;background:linear-gradient(135deg,#ff4d2d,#ff8a65);cursor:pointer;text-align:center}
+  .buy-btn:active{transform:scale(.97)}
   .empty{max-width:1000px;margin:50px auto;text-align:center;color:var(--muted)}
   .loadmore-wrap{max-width:1000px;margin:18px auto;text-align:center}
   .loadmore{padding:12px 28px;border:1px solid var(--ring);border-radius:999px;background:var(--glass);color:#fff;font-weight:700;cursor:pointer}
-  .skel{background:var(--glass);border:1px solid var(--ring);border-radius:16px;height:240px;animation:pulse 1.2s infinite}
+  .skel{background:var(--glass);border:1px solid var(--ring);border-radius:16px;aspect-ratio:.7;animation:pulse 1.2s infinite}
   @keyframes pulse{0%,100%{opacity:.4}50%{opacity:.8}}
-  .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#222;color:#fff;padding:12px 20px;border-radius:999px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .25s;border:1px solid var(--ring);z-index:50}
-  .toast.show{opacity:1}
   footer{max-width:1000px;margin:30px auto 0;text-align:center;color:var(--muted);font-size:12px}
 </style>
 </head>
 <body>
   <div class="sticky">
     <div class="topbar">
-      <div class="brand">🎟️ Mã Giảm Giá Shopee</div>
+      <div class="brand">🔥 Săn Sale Shopee</div>
       <button class="icon-btn" id="reload" title="Tải lại">⟳</button>
     </div>
-    <div class="sub">Mã freeship, giảm tiền, hoàn xu — cập nhật mỗi ngày. Bấm lấy mã rồi mua trên Shopee!</div>
-    <div class="searchbar">
-      <input id="search" placeholder="Tìm mã theo tên / mô tả...">
+    <div class="sub">Sản phẩm giá tốt — bấm Mua ngay để qua Shopee!</div>
+    <div class="searchbar"><input id="search" placeholder="Tìm sản phẩm theo tên..."></div>
+    <div class="chips">
+      <div class="chip on" data-min="0">Tất cả</div>
+      <div class="chip" data-min="20">Giảm 20%+</div>
+      <div class="chip" data-min="50">Giảm 50%+</div>
     </div>
   </div>
 
   <div class="status" id="status"></div>
   <div class="grid" id="grid"></div>
   <div class="loadmore-wrap" id="loadmoreWrap" style="display:none">
-    <button class="loadmore" id="loadmore">Xem thêm mã</button>
+    <button class="loadmore" id="loadmore">Xem thêm</button>
   </div>
-  <footer>Nghiện Sale · Săn mã giảm mỗi ngày</footer>
-
-  <div class="toast" id="toast"></div>
+  <footer>Nghiện Sale · Giá tốt mỗi ngày</footer>
 
 <script>
-  const API = '/api';
-  let page = 1, all = [];
-  const grid = document.getElementById('grid');
-  const statusEl = document.getElementById('status');
-  const toastEl = document.getElementById('toast');
-  const loadmoreWrap = document.getElementById('loadmoreWrap');
-
-  function toast(m){ toastEl.textContent=m; toastEl.classList.add('show');
-    setTimeout(function(){ toastEl.classList.remove('show'); },1600); }
-  function money(n){ return Number(n).toLocaleString('vi-VN')+'đ'; }
-
-  function dealText(c){
-    if(c.discountValue>0) return 'Giảm ' + money(c.discountValue);
-    if(c.discountPct>0)   return 'Giảm ' + c.discountPct + '%';
-    return '🎁 Ưu đãi Shopee';
-  }
-
+  const API='/api'; let page=1, all=[], minDiscount=0;
+  const grid=document.getElementById('grid'), statusEl=document.getElementById('status'), loadmoreWrap=document.getElementById('loadmoreWrap');
+  function money(n){ if(n===null||n===undefined||n==='') return ''; return Number(n).toLocaleString('vi-VN')+'đ'; }
   function skeleton(n){ grid.innerHTML=''; for(let i=0;i<n;i++){ const s=document.createElement('div'); s.className='skel'; grid.appendChild(s);} }
-
-  function makeCard(c){
-    const card=document.createElement('div'); card.className='vc';
-
-    const top=document.createElement('div'); top.className='vtop';
-    if(c.image){ const img=document.createElement('img'); img.loading='lazy'; img.src=c.image;
-      img.onerror=function(){ top.style.display='none'; }; top.appendChild(img); }
-    if(c.isHot){ const h=document.createElement('div'); h.className='hot'; h.textContent='🔥 HOT'; top.appendChild(h); }
-    if(c.image||c.isHot) card.appendChild(top);
-
-    const body=document.createElement('div'); body.className='vbody';
-    const name=document.createElement('div'); name.className='vname'; name.textContent=c.name; body.appendChild(name);
-    const deal=document.createElement('div'); deal.className='vdeal'; deal.textContent=dealText(c); body.appendChild(deal);
-    if(c.minSpend>0){ const cond=document.createElement('div'); cond.className='vcond'; cond.textContent='Đơn tối thiểu '+money(c.minSpend); body.appendChild(cond); }
-
-    if(c.code){
-      const box=document.createElement('div'); box.className='vcode';
-      const cd=document.createElement('div'); cd.className='code'; cd.textContent=c.code;
-      const btn=document.createElement('button'); btn.textContent='Copy';
-      btn.addEventListener('click',function(){ navigator.clipboard.writeText(c.code).then(function(){
-        toast('Đã copy mã: '+c.code); btn.textContent='✓'; btn.classList.add('copied');
-        setTimeout(function(){ btn.textContent='Copy'; btn.classList.remove('copied'); },1400); }); });
-      box.appendChild(cd); box.appendChild(btn); body.appendChild(box);
-    }
-
-    if(c.timeLeft){ const t=document.createElement('div'); t.className='vtime'; t.textContent='⏳ '+c.timeLeft; body.appendChild(t); }
-
-    const cta=document.createElement('button'); cta.className='cta'; cta.textContent='🛒 Lấy mã & đến Shopee';
-    cta.addEventListener('click',function(){ if(c.code) navigator.clipboard.writeText(c.code); window.open(c.link,'_blank'); });
-    body.appendChild(cta);
-
+  function makeCard(p){
+    const card=document.createElement('div'); card.className='card';
+    const tw=document.createElement('div'); tw.className='thumb-wrap';
+    const img=document.createElement('img'); img.className='thumb'; img.loading='lazy'; img.src=p.image||'';
+    img.onerror=function(){ img.style.visibility='hidden'; }; tw.appendChild(img);
+    if(p.rate>0){ const b=document.createElement('div'); b.className='badge'; b.textContent='-'+p.rate+'%'; tw.appendChild(b); }
+    card.appendChild(tw);
+    const body=document.createElement('div'); body.className='body';
+    const name=document.createElement('div'); name.className='name'; name.textContent=p.title||''; body.appendChild(name);
+    const pr=document.createElement('div'); pr.className='price';
+    if(p.final<p.price){ pr.innerHTML=money(p.final)+'<span class="old">'+money(p.price)+'</span>'; } else { pr.textContent=money(p.price||p.final); }
+    body.appendChild(pr);
+    const buy=document.createElement('button'); buy.className='buy-btn'; buy.textContent='🛒 Mua ngay';
+    buy.addEventListener('click',function(){ window.open(p.link,'_blank'); }); body.appendChild(buy);
     card.appendChild(body); return card;
   }
-
   function currentView(){
     const q=document.getElementById('search').value.trim().toLowerCase();
-    if(!q) return all;
-    return all.filter(function(c){ return (c.name+' '+c.content).toLowerCase().indexOf(q)>=0; });
+    return all.filter(function(p){
+      if((p.rate||0)<minDiscount) return false;
+      if(q && (p.title||'').toLowerCase().indexOf(q)<0) return false;
+      return true;
+    }).sort(function(a,b){ return (b.rate||0)-(a.rate||0); });
   }
-
-  function render(){
-    const list=currentView();
-    grid.innerHTML='';
-    if(!list.length){ grid.innerHTML='<div class="empty">Không có mã phù hợp.</div>'; return; }
-    list.forEach(function(c){ grid.appendChild(makeCard(c)); });
-  }
-
-  function load(p){
-    if(p===1) skeleton(8);
-    statusEl.textContent='Đang tải mã giảm giá...';
+  function render(){ const list=currentView(); grid.innerHTML='';
+    if(!list.length){ grid.innerHTML='<div class="empty">Không có sản phẩm phù hợp.</div>'; return; }
+    list.forEach(function(p){ grid.appendChild(makeCard(p)); }); }
+  function load(p){ if(p===1) skeleton(10); statusEl.textContent='Đang tải...';
     fetch(API+'/items?page='+p).then(function(r){return r.json();}).then(function(data){
       if(data.error){ statusEl.textContent='Lỗi: '+data.error+(data.message?(' - '+data.message):''); grid.innerHTML=''; return; }
-      const list=data.items||[];
-      all=all.concat(list);
-      statusEl.textContent='🎟️ '+all.length+' mã giảm giá đang có';
-      render();
+      const list=data.products||[]; all=all.concat(list);
+      statusEl.textContent=all.length+' sản phẩm'; render();
       loadmoreWrap.style.display=list.length?'block':'none';
-    }).catch(function(e){ statusEl.textContent='Không tải được dữ liệu: '+e; grid.innerHTML=''; });
-  }
-
+    }).catch(function(e){ statusEl.textContent='Không tải được dữ liệu: '+e; grid.innerHTML=''; }); }
   document.getElementById('loadmore').addEventListener('click',function(){ page++; load(page); });
   document.getElementById('reload').addEventListener('click',function(){ page=1; all=[]; load(page); });
   let t; document.getElementById('search').addEventListener('input',function(){ clearTimeout(t); t=setTimeout(render,200); });
-
+  document.querySelectorAll('.chip').forEach(function(c){ c.addEventListener('click',function(){
+    document.querySelectorAll('.chip').forEach(function(x){x.classList.remove('on');}); c.classList.add('on');
+    minDiscount=Number(c.getAttribute('data-min')); render(); }); });
   load(page);
 </script>
 </body>
