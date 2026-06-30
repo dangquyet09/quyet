@@ -3,94 +3,107 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🔥 Flash Sale 1K - Săn Deal Giá Rẻ</title>
+<title>Flash Sale 1K - Săn Deal Giá Sốc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',system-ui,sans-serif}
-body{background:#14100d;color:#fff;min-height:100vh}
-.wrap{max-width:1100px;margin:0 auto;padding:0 14px}
-header{position:sticky;top:0;z-index:20;background:rgba(20,16,13,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06);padding:14px 0}
-.brand{font-size:22px;font-weight:800;background:linear-gradient(135deg,#ff4d2d,#ff8a65);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-align:center}
-.sub{text-align:center;color:#9a8f86;font-size:12px;margin-top:3px}
-.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;margin:16px 0}
-.search{flex:1;min-width:220px;max-width:420px;background:#211a15;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:11px 14px;color:#fff;font-size:14px;outline:none}
-.search:focus{border-color:#ff4d2d}
-.chips{display:flex;gap:8px}
-.chip{background:#211a15;border:1px solid rgba(255,255,255,.08);color:#cfc6bd;padding:9px 14px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
-.chip.active{background:linear-gradient(135deg,#ff4d2d,#ff8a65);color:#fff;border-color:transparent}
-.status{text-align:center;color:#9a8f86;font-size:13px;margin:6px 0 16px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;padding-bottom:40px}
-.card{background:#1d1712;border:1px solid rgba(255,255,255,.06);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:transform .15s,border-color .15s}
-.card:hover{transform:translateY(-3px);border-color:#ff4d2d}
-.imgbox{position:relative;aspect-ratio:1;background:#272019}
-.imgbox img{width:100%;height:100%;object-fit:cover}
-.badge{position:absolute;top:8px;left:8px;background:linear-gradient(135deg,#ff4d2d,#ff8a65);color:#fff;font-size:12px;font-weight:800;padding:3px 8px;border-radius:8px}
-.info{padding:10px 11px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
-.title{font-size:13px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:35px}
-.price{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}
-.now{color:#ff8a65;font-weight:800;font-size:16px}
-.old{color:#7a7068;text-decoration:line-through;font-size:12px}
-.buy{margin-top:auto;background:linear-gradient(135deg,#ff4d2d,#ff8a65);color:#fff;text-align:center;font-weight:700;font-size:13px;padding:8px;border-radius:9px}
-.sk{background:#1d1712;border-radius:14px;overflow:hidden}
-.sk .imgbox{animation:pulse 1.2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
-.empty{text-align:center;color:#9a8f86;padding:60px 0;font-size:15px}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;background:#14100d;color:#fff;min-height:100vh}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+  header{text-align:center;padding:34px 16px 10px}
+  h1{font-size:30px;font-weight:800;background:linear-gradient(90deg,#ff4d2d,#ff8a65);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .sub{color:#b9ada3;font-size:14px;margin-top:4px}
+  .upd{color:#7e736a;font-size:12px;margin-top:6px}
+  .bar{display:flex;flex-direction:column;gap:14px;align-items:center;margin:22px 0 6px}
+  .search{width:100%;max-width:480px;display:flex;align-items:center;gap:10px;background:#1f1813;border:1px solid #3a2c22;border-radius:14px;padding:12px 16px}
+  .search input{flex:1;background:none;border:none;outline:none;color:#fff;font-size:15px}
+  .search input::placeholder{color:#7e736a}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
+  .chip{padding:9px 18px;border-radius:999px;border:1px solid #3a2c22;background:#1f1813;color:#cbbfb4;font-size:14px;font-weight:600;cursor:pointer;transition:.15s}
+  .chip:hover{border-color:#ff6b3d}
+  .chip.active{background:linear-gradient(90deg,#ff4d2d,#ff8a65);color:#fff;border-color:transparent}
+  .count{text-align:center;color:#9d9189;font-size:13px;margin:14px 0}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:16px;padding-bottom:50px}
+  .card{background:#1c1611;border:1px solid #2c211a;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:.18s;animation:fade .4s}
+  .card:hover{transform:translateY(-4px);border-color:#ff6b3d;box-shadow:0 10px 26px rgba(255,77,45,.16)}
+  .imgwrap{position:relative;aspect-ratio:1;background:#0f0c0a}
+  .imgwrap img{width:100%;height:100%;object-fit:cover}
+  .badge{position:absolute;top:8px;left:8px;background:#ff4d2d;color:#fff;font-size:12px;font-weight:700;padding:3px 8px;border-radius:8px}
+  .body{padding:11px 12px 13px;display:flex;flex-direction:column;flex:1}
+  .title{font-size:13px;line-height:1.35;color:#e9e1d9;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:35px}
+  .price{margin-top:8px}
+  .now{color:#ff6b3d;font-size:17px;font-weight:800}
+  .old{color:#7e736a;font-size:12px;text-decoration:line-through;margin-left:6px}
+  .buy{margin-top:10px;text-align:center;background:linear-gradient(90deg,#ff4d2d,#ff8a65);color:#fff;font-weight:700;font-size:13px;padding:9px;border-radius:10px;text-decoration:none}
+  .buy:hover{opacity:.92}
+  .empty{text-align:center;color:#9d9189;padding:60px 16px;font-size:15px}
+  .sk{background:#1c1611;border-radius:16px;height:280px;animation:pulse 1.2s infinite}
+  @keyframes pulse{0%,100%{opacity:.5}50%{opacity:.85}}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1}}
 </style>
 </head>
 <body>
 <header>
-  <div class="wrap">
-    <div class="brand">🔥 FLASH SALE 1K</div>
-    <div class="sub" id="updated">Săn deal giá sốc mỗi khung giờ</div>
-  </div>
+  <h1>🔥 FLASH SALE 1K</h1>
+  <div class="sub">Săn deal giá sốc mỗi khung giờ</div>
+  <div class="upd" id="upd"></div>
 </header>
 <div class="wrap">
-  <div class="controls">
-    <input class="search" id="q" placeholder="🔍 Tìm sản phẩm...">
-    <div class="chips">
-      <div class="chip active" data-min="0">Tất cả</div>
-      <div class="chip" data-min="20">Giảm 20%+</div>
-      <div class="chip" data-min="50">Giảm 50%+</div>
+  <div class="bar">
+    <div class="search">
+      <span>🔍</span>
+      <input id="q" placeholder="Tìm sản phẩm...">
+    </div>
+    <div class="chips" id="chips">
+      <div class="chip active" data-bucket="all">Tất cả</div>
+      <div class="chip" data-bucket="1k">1.000đ</div>
+      <div class="chip" data-bucket="9k">9.000đ</div>
+      <div class="chip" data-bucket="29k">29.000đ</div>
+      <div class="chip" data-bucket="59k">59.000đ</div>
     </div>
   </div>
-  <div class="status" id="status">Đang tải...</div>
+  <div class="count" id="count"></div>
   <div class="grid" id="grid"></div>
 </div>
 <script>
-let all=[], minRate=0, kw='';
-const grid=document.getElementById('grid'), statusEl=document.getElementById('status');
-const fmt=n=>n.toLocaleString('vi-VN')+'đ';
+  let DATA=[], bucket='all', kw='';
+  const grid=document.getElementById('grid'), countEl=document.getElementById('count');
+  const fmt=n=>n.toLocaleString('vi-VN')+'đ';
 
-function skeleton(n){grid.innerHTML='';for(let i=0;i<n;i++){const d=document.createElement('div');d.className='sk';d.innerHTML='<div class="imgbox"></div><div class="info"><div class="title"></div></div>';grid.appendChild(d);}}
+  function render(){
+    const list=DATA.filter(p=>(bucket==='all'||p.bucket===bucket)&&(!kw||(p.title||'').toLowerCase().includes(kw)));
+    countEl.textContent=list.length+' sản phẩm';
+    if(!list.length){grid.innerHTML='<div class="empty">Không có sản phẩm phù hợp 🔍</div>';return;}
+    grid.innerHTML=list.map(p=>`
+      <div class="card">
+        <div class="imgwrap">
+          <img src="${p.image}" loading="lazy" onerror="this.style.opacity=.2">
+          ${p.rate?`<div class="badge">-${p.rate}%</div>`:''}
+        </div>
+        <div class="body">
+          <div class="title">${p.title||''}</div>
+          <div class="price"><span class="now">${fmt(p.final)}</span>${p.price&&p.price>p.final?`<span class="old">${fmt(p.price)}</span>`:''}</div>
+          <a class="buy" href="${p.link}" target="_blank" rel="noopener">🛒 Mua ngay</a>
+        </div>
+      </div>`).join('');
+  }
 
-function render(){
-  const list=all.filter(p=>p.rate>=minRate && (!kw || (p.title||'').toLowerCase().includes(kw)));
-  statusEl.textContent=list.length+' sản phẩm';
-  if(!list.length){grid.innerHTML='<div class="empty">Không tìm thấy sản phẩm nào 😅</div>';return;}
-  grid.innerHTML='';
-  list.forEach(p=>{
-    const a=document.createElement('a');a.className='card';a.href=p.link;a.target='_blank';a.rel='nofollow';
-    a.innerHTML=
-      '<div class="imgbox">'+(p.rate?'<span class="badge">-'+p.rate+'%</span>':'')+'<img loading="lazy" src="'+p.image+'" alt=""></div>'+
-      '<div class="info"><div class="title">'+(p.title||'')+'</div>'+
-      '<div class="price"><span class="now">'+fmt(p.final)+'</span>'+(p.price&&p.price>p.final?'<span class="old">'+fmt(p.price)+'</span>':'')+'</div>'+
-      '<div class="buy">🛒 Mua ngay</div></div>';
-    grid.appendChild(a);
+  document.getElementById('chips').addEventListener('click',e=>{
+    const c=e.target.closest('.chip'); if(!c)return;
+    document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));
+    c.classList.add('active'); bucket=c.dataset.bucket; render();
   });
-}
+  document.getElementById('q').addEventListener('input',e=>{kw=e.target.value.trim().toLowerCase();render();});
 
-document.getElementById('q').addEventListener('input',e=>{kw=e.target.value.toLowerCase().trim();render();});
-document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
-  document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));
-  c.classList.add('active');minRate=+c.dataset.min;render();
-}));
-
-skeleton(10);
-fetch('deals.json?t='+Date.now()).then(r=>r.json()).then(data=>{
-  all=(data.products||[]).sort((a,b)=>b.rate-a.rate);
-  if(data.updated)document.getElementById('updated').textContent='Cập nhật: '+data.updated;
-  render();
-}).catch(()=>{statusEl.textContent='Chưa có dữ liệu — hãy cập nhật deals.json';grid.innerHTML='';});
+  grid.innerHTML=Array(12).fill('<div class="sk"></div>').join('');
+  fetch('deals.json?t='+Date.now())
+    .then(r=>r.json())
+    .then(d=>{
+      DATA=d.products||[];
+      if(d.updated)document.getElementById('upd').textContent='Cập nhật: '+d.updated;
+      render();
+    })
+    .catch(()=>{grid.innerHTML='<div class="empty">Chưa tải được dữ liệu 😢</div>';});
 </script>
 </body>
 </html>
