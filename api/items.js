@@ -4,10 +4,10 @@ export default async function handler(req, res) {
   const TOKEN = process.env.AT_TOKEN;
   if (!TOKEN) return res.status(500).json({ products: [], error: 'missing_token' });
 
-  const page  = req.query.page  || 1;
-  const limit = req.query.limit || 50;
+  const page  = req.query.page || 1;
+  const MIN   = Number(req.query.min) || 20;   // 👈 chỉ lấy deal giảm >= 20%
+  const limit = 100;                           // lấy nhiều rồi lọc ra hàng ngon
 
-  // status_discount=true => chỉ lấy sản phẩm đang giảm giá
   const url = 'https://api.accesstrade.vn/v1/datafeeds?domain=shopee.vn&page=' + page + '&limit=' + limit;
 
   try {
@@ -23,14 +23,9 @@ export default async function handler(req, res) {
       let   rate  = Number(p.discount_rate) || 0;
 
       let final = price;
-      if (disc > 0 && disc < price && disc >= price * 0.1) {
-        final = disc;
-      } else if (rate > 0 && rate < 100) {
-        final = Math.round(price * (1 - rate / 100));
-      }
-      if (!rate && price > 0 && final < price) {
-        rate = Math.round((1 - final / price) * 100);
-      }
+      if (disc > 0 && disc < price && disc >= price * 0.1) final = disc;
+      else if (rate > 0 && rate < 100) final = Math.round(price * (1 - rate / 100));
+      if (!rate && price > 0 && final < price) rate = Math.round((1 - final / price) * 100);
 
       return {
         title: p.name,
@@ -41,9 +36,10 @@ export default async function handler(req, res) {
         rate:  (final < price ? rate : 0)
       };
     })
+    .filter(function (p) { return p.rate >= MIN; })   // 👈 BỎ deal lèo tèo (1%, 5%...)
     .sort(function (a, b) { return b.rate - a.rate; }); // giảm nhiều nhất lên đầu
 
-    return res.status(200).json({ products: products, total: raw.total || products.length, upstream: r.status });
+    return res.status(200).json({ products: products, total: products.length, upstream: r.status });
   } catch (e) {
     return res.status(502).json({ products: [], error: 'fetch_failed', message: String(e) });
   }
