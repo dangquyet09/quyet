@@ -3,26 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shopee Video Tool · Nghiện Sale</title>
+<title>Săn Sale Shopee · Nghiện Sale</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{--glass:rgba(255,255,255,.05);--ring:rgba(255,255,255,.1);--muted:rgba(255,255,255,.6);
-    --brand:#ff4d2d;--brand2:#ff8a65;--gold:#ffc24d;--green:#4cd97b}
+    --brand:#ff4d2d;--brand2:#ff8a65;--gold:#ffc24d}
   *{box-sizing:border-box}
   body{margin:0;padding:0 14px 90px;font-family:'Inter',sans-serif;color:#fff;
     background:radial-gradient(circle at 20% 20%,#1f1f2e,#0f0f1a) fixed;min-height:100vh}
-  .sticky{position:sticky;top:0;z-index:20;background:rgba(15,15,26,.85);backdrop-filter:blur(12px);
-    margin:0 -14px;padding:0 14px}
-  .topbar{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 2px 8px}
-  .brand{font-size:20px;font-weight:800;background:linear-gradient(90deg,#ff4d2d,#ff8a65);
+  .sticky{position:sticky;top:0;z-index:20;background:rgba(15,15,26,.85);backdrop-filter:blur(12px);margin:0 -14px;padding:0 14px}
+  .topbar{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 2px 4px}
+  .brand{font-size:21px;font-weight:800;background:linear-gradient(90deg,#ff4d2d,#ff8a65);
     -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .icon-btn{background:var(--glass);border:1px solid var(--ring);color:#fff;width:40px;height:40px;
-    border-radius:999px;cursor:pointer;font-size:16px}
-  .icon-btn:hover{background:rgba(255,255,255,.12)}
+  .sub{max-width:1000px;margin:0 auto;color:var(--muted);font-size:12.5px;padding:0 2px 8px}
+  .icon-btn{background:var(--glass);border:1px solid var(--ring);color:#fff;width:40px;height:40px;border-radius:999px;cursor:pointer;font-size:16px}
   .searchbar{max-width:1000px;margin:0 auto;display:flex;gap:8px;padding-bottom:8px}
-  .searchbar input{flex:1;padding:12px 16px;border-radius:999px;border:1px solid var(--ring);
-    background:var(--glass);color:#fff;font-size:14px;outline:none}
+  .searchbar input{flex:1;padding:12px 16px;border-radius:999px;border:1px solid var(--ring);background:var(--glass);color:#fff;font-size:14px;outline:none}
   .searchbar input::placeholder{color:rgba(255,255,255,.45)}
   .chips{max-width:1000px;margin:0 auto;display:flex;gap:8px;padding-bottom:12px;overflow-x:auto}
   .chip{padding:7px 16px;border-radius:999px;border:1px solid var(--ring);background:var(--glass);
@@ -33,98 +30,72 @@
   .card{background:var(--glass);border:1px solid var(--ring);border-radius:16px;overflow:hidden;
     display:flex;flex-direction:column;transition:transform .15s,border-color .15s}
   .card:hover{transform:translateY(-3px);border-color:rgba(255,138,101,.5)}
-  .card.done{opacity:.6}
   .thumb-wrap{position:relative;width:100%;aspect-ratio:1/1;background:#1a1a28}
   .thumb{width:100%;height:100%;object-fit:cover}
   .badge{position:absolute;top:8px;left:8px;background:linear-gradient(135deg,#ff4d2d,#ff8a65);
-    color:#fff;font-size:12px;font-weight:800;padding:3px 8px;border-radius:8px}
-  .done-flag{position:absolute;top:8px;right:8px;background:rgba(76,217,123,.9);color:#062;
-    font-size:11px;font-weight:800;padding:3px 8px;border-radius:8px}
+    color:#fff;font-size:12px;font-weight:800;padding:4px 9px;border-radius:8px;box-shadow:0 2px 8px rgba(255,77,45,.5)}
   .body{padding:10px;display:flex;flex-direction:column;gap:7px;flex:1}
   .name{font-size:13px;font-weight:600;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;
     -webkit-box-orient:vertical;overflow:hidden;min-height:36px}
-  .price{font-size:15px;font-weight:800;color:var(--gold)}
+  .price{font-size:16px;font-weight:800;color:var(--gold)}
   .price .old{font-size:11px;font-weight:500;color:var(--muted);text-decoration:line-through;margin-left:6px}
-  .actions{display:flex;gap:6px;margin-top:auto}
-  .copy-btn{flex:2;padding:9px;border:none;border-radius:10px;font-weight:700;font-size:13px;color:#fff;
-    background:linear-gradient(135deg,#ff4d2d,#ff8a65);cursor:pointer}
-  .copy-btn.copied{background:var(--green)}
-  .copy-btn:active{transform:scale(.97)}
-  .view-btn{flex:1;padding:9px;border:1px solid var(--ring);border-radius:10px;font-weight:700;
-    font-size:13px;color:#fff;background:transparent;cursor:pointer}
-  .tg{padding:7px;border-radius:8px;border:1px solid var(--ring);background:transparent;
-    color:var(--muted);font-size:11px;cursor:pointer}
-  .tg.on{background:rgba(76,217,123,.15);border-color:var(--green);color:var(--green)}
+  .buy-btn{margin-top:auto;padding:11px;border:none;border-radius:10px;font-weight:800;font-size:14px;color:#fff;
+    background:linear-gradient(135deg,#ff4d2d,#ff8a65);cursor:pointer;text-align:center}
+  .buy-btn:active{transform:scale(.97)}
   .empty{max-width:1000px;margin:50px auto;text-align:center;color:var(--muted)}
   .loadmore-wrap{max-width:1000px;margin:18px auto;text-align:center}
-  .loadmore{padding:12px 28px;border:1px solid var(--ring);border-radius:999px;background:var(--glass);
-    color:#fff;font-weight:700;cursor:pointer}
-  .loadmore:hover{background:rgba(255,255,255,.12)}
-  .skel{background:var(--glass);border:1px solid var(--ring);border-radius:16px;aspect-ratio:.7;
-    animation:pulse 1.2s infinite}
+  .loadmore{padding:12px 28px;border:1px solid var(--ring);border-radius:999px;background:var(--glass);color:#fff;font-weight:700;cursor:pointer}
+  .skel{background:var(--glass);border:1px solid var(--ring);border-radius:16px;aspect-ratio:.7;animation:pulse 1.2s infinite}
   @keyframes pulse{0%,100%{opacity:.4}50%{opacity:.8}}
-  .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#222;color:#fff;
-    padding:12px 20px;border-radius:999px;font-size:14px;opacity:0;pointer-events:none;
-    transition:opacity .25s;border:1px solid var(--ring);z-index:50}
-  .toast.show{opacity:1}
   footer{max-width:1000px;margin:30px auto 0;text-align:center;color:var(--muted);font-size:12px}
 </style>
 </head>
 <body>
   <div class="sticky">
     <div class="topbar">
-      <div class="brand">🛍️ Shopee Video Tool</div>
+      <div class="brand">🔥 Săn Sale Shopee</div>
       <button class="icon-btn" id="reload" title="Tải lại">⟳</button>
     </div>
+    <div class="sub">Deal giảm giá sốc, cập nhật liên tục — bấm Mua ngay để săn!</div>
     <div class="searchbar">
       <input id="search" placeholder="Tìm sản phẩm theo tên...">
     </div>
     <div class="chips">
-      <div class="chip on" data-f="all">Tất cả</div>
-      <div class="chip" data-f="todo">Chưa làm</div>
-      <div class="chip" data-f="done">Đã làm</div>
+      <div class="chip on" data-min="0">Tất cả</div>
+      <div class="chip" data-min="20">Giảm 20%+</div>
+      <div class="chip" data-min="50">Giảm 50%+</div>
+      <div class="chip" data-min="70">Giảm 70%+</div>
     </div>
   </div>
 
   <div class="status" id="status"></div>
   <div class="grid" id="grid"></div>
   <div class="loadmore-wrap" id="loadmoreWrap" style="display:none">
-    <button class="loadmore" id="loadmore">Tải thêm sản phẩm</button>
+    <button class="loadmore" id="loadmore">Xem thêm deal</button>
   </div>
-  <footer>Nghiện Sale · Affiliate qua AccessTrade</footer>
-
-  <div class="toast" id="toast"></div>
+  <footer>Nghiện Sale · Giá tốt mỗi ngày</footer>
 
 <script>
   const API = '/api';
-  let page = 1, all = [], filter = 'all';
-  let done = JSON.parse(localStorage.getItem('sv_done') || '{}');
+  let page = 1, all = [], minDiscount = 0;
 
   const grid = document.getElementById('grid');
   const statusEl = document.getElementById('status');
-  const toastEl = document.getElementById('toast');
   const loadmoreWrap = document.getElementById('loadmoreWrap');
 
-  function saveDone(){ localStorage.setItem('sv_done', JSON.stringify(done)); }
-  function toast(m){ toastEl.textContent=m; toastEl.classList.add('show');
-    setTimeout(function(){ toastEl.classList.remove('show'); },1600); }
   function money(n){ if(n===null||n===undefined||n==='') return '';
     return Number(n).toLocaleString('vi-VN')+'đ'; }
-  function keyOf(p){ return p.link || p.title; }
 
   function skeleton(n){ grid.innerHTML=''; for(let i=0;i<n;i++){
     const s=document.createElement('div'); s.className='skel'; grid.appendChild(s);} }
 
   function makeCard(p){
-    const k=keyOf(p), isDone=!!done[k];
-    const card=document.createElement('div'); card.className='card'+(isDone?' done':'');
-
+    const card=document.createElement('div'); card.className='card';
     const tw=document.createElement('div'); tw.className='thumb-wrap';
     const img=document.createElement('img'); img.className='thumb'; img.loading='lazy'; img.src=p.image||'';
     img.onerror=function(){ img.style.visibility='hidden'; };
     tw.appendChild(img);
     if(p.rate>0){ const b=document.createElement('div'); b.className='badge'; b.textContent='-'+p.rate+'%'; tw.appendChild(b); }
-    if(isDone){ const f=document.createElement('div'); f.className='done-flag'; f.textContent='✓ Đã làm'; tw.appendChild(f); }
     card.appendChild(tw);
 
     const body=document.createElement('div'); body.className='body';
@@ -135,49 +106,39 @@
     else { pr.textContent=money(p.price||p.final); }
     body.appendChild(pr);
 
-    const act=document.createElement('div'); act.className='actions';
-    const copy=document.createElement('button'); copy.className='copy-btn'; copy.textContent='📋 Copy';
-    copy.addEventListener('click',function(){ navigator.clipboard.writeText(p.link).then(function(){
-      toast('Đã copy link affiliate!'); copy.textContent='✓ Đã copy'; copy.classList.add('copied');
-      setTimeout(function(){ copy.textContent='📋 Copy'; copy.classList.remove('copied'); },1400); }); });
-    const view=document.createElement('button'); view.className='view-btn'; view.textContent='👁 Xem';
-    view.addEventListener('click',function(){ window.open(p.link,'_blank'); });
-    act.appendChild(copy); act.appendChild(view); body.appendChild(act);
-
-    const tg=document.createElement('button'); tg.className='tg'+(isDone?' on':'');
-    tg.textContent=isDone?'✓ Đã làm video':'Đánh dấu đã làm';
-    tg.addEventListener('click',function(){ done[k]=!done[k]; saveDone(); render(); });
-    body.appendChild(tg);
+    const buy=document.createElement('button'); buy.className='buy-btn'; buy.textContent='🛒 Mua ngay';
+    buy.addEventListener('click',function(){ window.open(p.link,'_blank'); });
+    body.appendChild(buy);
 
     card.appendChild(body); return card;
   }
 
   function currentView(){
     const q=document.getElementById('search').value.trim().toLowerCase();
-    return all.filter(function(p){
-      const k=keyOf(p);
-      if(filter==='done' && !done[k]) return false;
-      if(filter==='todo' && done[k]) return false;
-      if(q && (p.title||'').toLowerCase().indexOf(q)<0) return false;
-      return true;
-    });
+    return all
+      .filter(function(p){
+        if((p.rate||0) < minDiscount) return false;
+        if(q && (p.title||'').toLowerCase().indexOf(q)<0) return false;
+        return true;
+      })
+      .sort(function(a,b){ return (b.rate||0)-(a.rate||0); }); // giảm nhiều nhất lên đầu
   }
 
   function render(){
     const list=currentView();
     grid.innerHTML='';
-    if(!list.length){ grid.innerHTML='<div class="empty">Không có sản phẩm phù hợp.</div>'; return; }
+    if(!list.length){ grid.innerHTML='<div class="empty">Chưa có deal phù hợp. Thử bộ lọc khác nhé!</div>'; return; }
     list.forEach(function(p){ grid.appendChild(makeCard(p)); });
   }
 
   function load(p){
     if(p===1) skeleton(10);
-    statusEl.textContent='Đang tải...';
+    statusEl.textContent='Đang tải deal...';
     fetch(API+'/items?page='+p).then(function(r){return r.json();}).then(function(data){
       if(data.error){ statusEl.textContent='Lỗi: '+data.error+(data.message?(' - '+data.message):''); grid.innerHTML=''; return; }
       const list=data.products||[];
       all=all.concat(list);
-      statusEl.textContent='Đã tải '+all.length+' sản phẩm';
+      statusEl.textContent='🔥 '+all.length+' deal đang giảm giá';
       render();
       loadmoreWrap.style.display=list.length?'block':'none';
     }).catch(function(e){ statusEl.textContent='Không tải được dữ liệu: '+e; grid.innerHTML=''; });
@@ -188,7 +149,7 @@
   let t; document.getElementById('search').addEventListener('input',function(){ clearTimeout(t); t=setTimeout(render,200); });
   document.querySelectorAll('.chip').forEach(function(c){ c.addEventListener('click',function(){
     document.querySelectorAll('.chip').forEach(function(x){x.classList.remove('on');});
-    c.classList.add('on'); filter=c.getAttribute('data-f'); render(); }); });
+    c.classList.add('on'); minDiscount=Number(c.getAttribute('data-min')); render(); }); });
 
   load(page);
 </script>
