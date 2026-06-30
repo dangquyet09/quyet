@@ -1,244 +1,455 @@
 {
+  "updated": "11:42 30-06",
   "products": [
     {
-      "title": "Quạt tuần hoàn không khí Gaabor FM-M01A luồng gió 3D luồng gió mạnh công suất 80W",
+      "bucket": "other",
+      "final": 610000,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mpt0xzi43kst64",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F528571633%2F58160539684&affiliate_id=17310760448&sub_id=flashsale",
       "price": 1400000,
-      "final": 610000,
-      "rate": 56
+      "rate": 56,
+      "title": "Quạt tuần hoàn không khí Gaabor FM-M01A luồng gió 3D luồng gió mạnh công suất 80W"
     },
     {
-      "title": "Ổ cứng di động SSD Sandisk Extreme Portable SDSSDE61-G25 500GB/1TB/2TB/4TB V2 E61 upto 1050/1000 MB/s BH 5 năm",
+      "bucket": "other",
+      "final": 7950000,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mpv1s0f0u39ea5",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F1252436658%2F22590099603&affiliate_id=17310760448&sub_id=flashsale",
       "price": 18000000,
-      "final": 7950000,
-      "rate": 56
+      "rate": 56,
+      "title": "Ổ cứng di động SSD Sandisk Extreme Portable SDSSDE61-G25 500GB/1TB/2TB/4TB V2 E61 upto 1050/1000 MB/s BH 5 năm"
     },
     {
-      "title": "Giày Thể Thao Chạy Bộ Nam Nữ GOYA DAILY Năm 2026 - Êm Ái, Thoáng Khí, Hạn Chế Trơn Trượt 2",
+      "bucket": "other",
+      "final": 519000,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-ml1k2apgazur08",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F255704819%2F24553402194&affiliate_id=17310760448&sub_id=flashsale",
       "price": 1080000,
-      "final": 519000,
-      "rate": 52
+      "rate": 52,
+      "title": "Giày Thể Thao Chạy Bộ Nam Nữ GOYA DAILY Năm 2026 - Êm Ái, Thoáng Khí, Hạn Chế Trơn Trượt 2"
     },
     {
-      "title": "Áo Cầu Lông Kamito Combat V2 Nữ, Áo Thun Thể Thao, Áo Cầu Lông Nữ",
+      "bucket": "other",
+      "final": 90000,
       "image": "https://cf.shopee.vn/file/vn-11134207-7ra0g-ma6kc0oucb5v24",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F353619944%2F42452105024&affiliate_id=17310760448&sub_id=flashsale",
       "price": 179000,
-      "final": 90000,
-      "rate": 50
+      "rate": 50,
+      "title": "Áo Cầu Lông Kamito Combat V2 Nữ, Áo Thun Thể Thao, Áo Cầu Lông Nữ"
     },
     {
-      "title": "Máy Triệt Lông Băng Lạnh Trẻ Hóa Da Halio IPL Cooling Hair Removal Device",
+      "bucket": "other",
+      "final": 749000,
+      "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mml6ypou9g5k14",
+      "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F93765933%2F26963681037&affiliate_id=17310760448&sub_id=flashsale",
+      "price": 1499000,
+      "rate": 50,
+      "title": "Bình lọc nước Liquelli White 2.2L (Có sẵn 1 lõi lọc Maxtra Pro 150L)"
+    },
+    {
+      "bucket": "other",
+      "final": 2100000,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mpx80kp4h7gv3d",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F88052476%2F21706254381&affiliate_id=17310760448&sub_id=flashsale",
       "price": 4000000,
-      "final": 2100000,
-      "rate": 48
+      "rate": 48,
+      "title": "Máy Triệt Lông Băng Lạnh Trẻ Hóa Da Halio IPL Cooling Hair Removal Device"
     },
     {
-      "title": "Máy Rửa Mặt Halio Facial Cleansing & Massaging Device - Dành Cho Mọi Loại Da",
+      "bucket": "other",
+      "final": 599000,
+      "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mpt6qal6ascg21",
+      "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F1103428920%2F27434230121&affiliate_id=17310760448&sub_id=flashsale",
+      "price": 1158000,
+      "rate": 48,
+      "title": "[MỚI VỀ - Chứng nhận CCC] Sạc Dự Phòng Baseus Qpow2 & Qpow 3 20000mAh PD 22.5W 30W 45W TypeC & IP 2 Cho iP"
+    },
+    {
+      "bucket": "other",
+      "final": 450000,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mowruowase0wed",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F88052476%2F1486008179&affiliate_id=17310760448&sub_id=flashsale",
       "price": 850000,
-      "final": 450000,
-      "rate": 47
+      "rate": 47,
+      "title": "Máy Rửa Mặt Halio Facial Cleansing & Massaging Device - Dành Cho Mọi Loại Da"
     },
     {
-      "title": "Cốc Nguyệt San BeUcup Silicol Y Tế Wacker Đức Siêu Mềm, Đạt Chuẩn FDA Hoa Kỳ",
+      "bucket": "other",
+      "final": 319000,
+      "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mova9lf8nle7f3",
+      "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F1543800024%2F50461087445&affiliate_id=17310760448&sub_id=flashsale",
+      "price": 589000,
+      "rate": 46,
+      "title": "Set bộ quần áo nam cổ tròn dáng thể thao chất liệu thoáng mát và thấm hút mồ hôi 40004747 TOKYOLIFE"
+    },
+    {
+      "bucket": "other",
+      "final": 109000,
+      "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mos5kcumh4oy02",
+      "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F763275998%2F20400581639&affiliate_id=17310760448&sub_id=flashsale",
+      "price": 200000,
+      "rate": 46,
+      "title": "Bao cao su siêu mỏng Hộp 30 chiếc Feelex Superthin ôm sát nhiều gel tăng khoái cảm đa dạng mùi hương"
+    },
+    {
+      "bucket": "other",
+      "final": 397000,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mq1d3f9uyo0f48",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F238383015%2F4540348072&affiliate_id=17310760448&sub_id=flashsale",
       "price": 699000,
-      "final": 397000,
-      "rate": 43
+      "rate": 43,
+      "title": "Cốc Nguyệt San BeUcup Silicol Y Tế Wacker Đức Siêu Mềm, Đạt Chuẩn FDA Hoa Kỳ"
     },
     {
-      "title": "Xịt chống nắng nâng tone HEXZE 100ml, SPF50 PA+++ hấp thụ tia cực tím, dưỡng trắng, nâng tone da",
+      "bucket": "other",
+      "final": 766360,
+      "image": "https://cf.shopee.vn/file/vn-11134207-7r98o-llk0uvnznn3q61",
+      "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F506810883%2F11038879981&affiliate_id=17310760448&sub_id=flashsale",
+      "price": 1345000,
+      "rate": 43,
+      "title": "Máy hút bụi giường nệm diệt khuẩn UV JETZT PRO cầm tay - hàng chính hãng"
+    },
+    {
+      "bucket": "other",
+      "final": 134000,
+      "image": "https://cf.shopee.vn/file/vn-11134207-7qukw-lext63cbuhsa09",
+      "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F35080757%2F11968273341&affiliate_id=17310760448&sub_id=flashsale",
+      "price": 235000,
+      "rate": 43,
+      "title": "Áo Sơ Mi Trơn Vải Lụa Tay Ngắn Cho Nam LADOS - 8069"
+    },
+    {
+      "bucket": "other",
+      "final": 118150,
       "image": "https://cf.shopee.vn/file/vn-11134207-7ra0g-m8p1rd5antke15",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F1107172226%2F24222585551&affiliate_id=17310760448&sub_id=flashsale",
       "price": 200000,
-      "final": 118150,
-      "rate": 41
+      "rate": 41,
+      "title": "Xịt chống nắng nâng tone HEXZE 100ml, SPF50 PA+++ hấp thụ tia cực tím, dưỡng trắng, nâng tone da"
     },
     {
-      "title": "Combo kem tẩy lông và kem dưỡng Ollie tẩy vùng kín, nách, tay, chân , an toàn không đau rát,dưỡng da phù hợp mọi loại da",
+      "bucket": "other",
+      "final": 1236700,
+      "image": "https://cf.shopee.vn/file/sg-11134201-824gv-mpulxdcuy8zz0b",
+      "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F174232562%2F54758178433&affiliate_id=17310760448&sub_id=flashsale",
+      "price": 2090000,
+      "rate": 41,
+      "title": "[DUY NHẤT ONLINE] Giày Thể Thao Nam Skechers BOBS Sport Diego Fusion Motion Thường Ngày - 118330-BBK Memory Foam"
+    },
+    {
+      "bucket": "other",
+      "final": 173850,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mq1d5p0plq0y10",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F238383015%2F19128682241&affiliate_id=17310760448&sub_id=flashsale",
       "price": 290000,
-      "final": 173850,
-      "rate": 40
+      "rate": 40,
+      "title": "Combo kem tẩy lông và kem dưỡng Ollie tẩy vùng kín, nách, tay, chân , an toàn không đau rát,dưỡng da phù hợp mọi loại da"
     },
     {
-      "title": "Túi cói vintage, túi đi biển NATOLI đi du lịch, đi chơi có khóa kéo đựng đồ tiện lợi BST Artisan Eco Jute Tote T36",
+      "bucket": "other",
+      "final": 119000,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mpucy8dedwjk49",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F515748887%2F44118799127&affiliate_id=17310760448&sub_id=flashsale",
       "price": 197000,
-      "final": 119000,
-      "rate": 40
+      "rate": 40,
+      "title": "Túi cói vintage, túi đi biển NATOLI đi du lịch, đi chơi có khóa kéo đựng đồ tiện lợi BST Artisan Eco Jute Tote T36"
     },
     {
-      "title": "Túi đeo chéo nam thương hiệu Natoli nhiều ngăn chống nước cao cấp BST CLASSIC CROSSBAG T8",
+      "bucket": "other",
+      "final": 244000,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mpucyq2l65tu52",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F515748887%2F19892413585&affiliate_id=17310760448&sub_id=flashsale",
       "price": 398000,
-      "final": 244000,
-      "rate": 39
+      "rate": 39,
+      "title": "Túi đeo chéo nam thương hiệu Natoli nhiều ngăn chống nước cao cấp BST CLASSIC CROSSBAG T8"
     },
     {
-      "title": "Camera Wifi Dahua Hero A1 3MP/5MP,Xoay 360 trong nhà, Đàm thoại 2 chiều ,Theo dõi chuyển động  H3AE/H5AE",
+      "bucket": "other",
+      "final": 469000,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mq1rglqvkf0uc5",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F1396002224%2F27416502014&affiliate_id=17310760448&sub_id=flashsale",
       "price": 769000,
-      "final": 469000,
-      "rate": 39
+      "rate": 39,
+      "title": "Camera Wifi Dahua Hero A1 3MP/5MP,Xoay 360 trong nhà, Đàm thoại 2 chiều ,Theo dõi chuyển động  H3AE/H5AE"
     },
     {
-      "title": "Gối cao su non công thái học EMA - Chống đau cổ vai gáy, giảm ngủ ngáy, ngừa thoái hóa đốt sống cổ",
+      "bucket": "other",
+      "final": 37290000,
+      "image": "https://cf.shopee.vn/file/vn-11134207-820l4-megm9h2a4f7k62",
+      "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F308461157%2F42568221380&affiliate_id=17310760448&sub_id=flashsale",
+      "price": 60000000,
+      "rate": 38,
+      "title": "Apple iPhone 17 Pro Max 256GB Chính hãng ZP/A"
+    },
+    {
+      "bucket": "other",
+      "final": 383000,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mps4jkbc91jhe8",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F292822630%2F21505280806&affiliate_id=17310760448&sub_id=flashsale",
       "price": 598000,
-      "final": 383000,
-      "rate": 36
+      "rate": 36,
+      "title": "Gối cao su non công thái học EMA - Chống đau cổ vai gáy, giảm ngủ ngáy, ngừa thoái hóa đốt sống cổ"
     },
     {
-      "title": "Nước giặt NET Matic túi x 3kg",
+      "bucket": "other",
+      "final": 111000,
       "image": "https://cf.shopee.vn/file/sg-11134201-824i5-mpsxg2d1xn2k1c",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F987373161%2F42662250602&affiliate_id=17310760448&sub_id=flashsale",
-      "price": 125000,
-      "final": 81000,
-      "rate": 35
+      "price": 168000,
+      "rate": 34,
+      "title": "Nước giặt NET Matic túi x 3kg"
     },
     {
-      "title": "Tinh chất viên nang diếp cá làm dịu da Abib Heartleaf TECA capsule serum Calming drop 50ml",
+      "bucket": "other",
+      "final": 1282500,
+      "image": "https://cf.shopee.vn/file/sg-11134201-824gd-mpxxhvqde0pafd",
+      "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F1295034717%2F26061250573&affiliate_id=17310760448&sub_id=flashsale",
+      "price": 1900000,
+      "rate": 33,
+      "title": "Giày Thời Trang PUMA Unisex Axis Màu Đen"
+    },
+    {
+      "bucket": "other",
+      "final": 480000,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mpyc9tcg4h6o16",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F1255924703%2F29019083794&affiliate_id=17310760448&sub_id=flashsale",
       "price": 708500,
-      "final": 480000,
-      "rate": 32
+      "rate": 32,
+      "title": "Tinh chất viên nang diếp cá làm dịu da Abib Heartleaf TECA capsule serum Calming drop 50ml"
     },
     {
-      "title": "Quần Ống Rộng 𝐂𝐂𝐇𝐀𝐓 Cạp Cao Dáng Đứng Chất Tuytsi Cao Cấp 13QDS2015DT",
+      "bucket": "other",
+      "final": 319000,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-ml2v83teu3nkae",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F99441940%2F21391889490&affiliate_id=17310760448&sub_id=flashsale",
       "price": 470000,
-      "final": 319000,
-      "rate": 32
+      "rate": 32,
+      "title": "Quần Ống Rộng 𝐂𝐂𝐇𝐀𝐓 Cạp Cao Dáng Đứng Chất Tuytsi Cao Cấp 13QDS2015DT"
     },
     {
-      "title": "[GIAO MIỀN BẮC] Bồn nước inox Tân Á Ngang 500N 1000N 1500N 2000N Sus 304 - Chính hãng, Bảo hành 12 năm",
+      "bucket": "other",
+      "final": 2999000,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mpswmqva8363ce",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F1378714536%2F24237622514&affiliate_id=17310760448&sub_id=flashsale",
       "price": 4429100,
-      "final": 2999000,
-      "rate": 32
+      "rate": 32,
+      "title": "[GIAO MIỀN BẮC] Bồn nước inox Tân Á Ngang 500N 1000N 1500N 2000N Sus 304 - Chính hãng, Bảo hành 12 năm"
     },
     {
-      "title": "(Chọn loại) Nước mắm Nam Ngư 500ml/750ml/900ml",
+      "bucket": "59k",
+      "final": 51000,
       "image": "https://cf.shopee.vn/file/sg-11134201-824g2-mpsxgau8bevgdc",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F987373161%2F29668576547&affiliate_id=17310760448&sub_id=flashsale",
       "price": 74000,
-      "final": 51000,
-      "rate": 31
+      "rate": 31,
+      "title": "(Chọn loại) Nước mắm Nam Ngư 500ml/750ml/900ml"
     },
     {
-      "title": "Bộ 3 Thực phẩm bảo vệ sức khỏe Pharmaton Energy Fizzi",
+      "bucket": "other",
+      "final": 3430000,
+      "image": "https://cf.shopee.vn/file/sg-11134201-824je-mplpd0n9fy8cc9",
+      "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F61342464%2F50604501702&affiliate_id=17310760448&sub_id=flashsale",
+      "price": 5000000,
+      "rate": 31,
+      "title": "Vali kéo du lịch PaXtra American Tourister Mỹ"
+    },
+    {
+      "bucket": "other",
+      "final": 132000,
+      "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mq1ggtlikah79c",
+      "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F268452626%2F14598692405&affiliate_id=17310760448&sub_id=flashsale",
+      "price": 176000,
+      "rate": 25,
+      "title": "Trà Đen Nhãn Vàng Cozy 100 Túi Lọc Rời Dùng Pha Chế Trà Chanh,Trà Tắc,Trà Chanh Dây Kim Quất,Trà Sữa"
+    },
+    {
+      "bucket": "other",
+      "final": 237000,
+      "image": "https://cf.shopee.vn/file/sg-11134201-824hl-mpxbvosxpd7262",
+      "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F54926827%2F1244383292&affiliate_id=17310760448&sub_id=flashsale",
+      "price": 313000,
+      "rate": 24,
+      "title": "Thuốc Nhuộm Tóc Phủ Bạc Tại Nhà Bigen Nhật - Phủ Bạc Thảo Dược, Dưỡng Tóc Mềm Mượt 80ml"
+    },
+    {
+      "bucket": "other",
+      "final": 286900,
       "image": "https://cf.shopee.vn/file/sg-11134201-824gt-mpwgorw5j8qz58",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F165026318%2F41451824984&affiliate_id=17310760448&sub_id=flashsale",
       "price": 377136,
-      "final": 286900,
-      "rate": 24
+      "rate": 24,
+      "title": "Bộ 3 Thực phẩm bảo vệ sức khỏe Pharmaton Energy Fizzi"
     },
     {
-      "title": "Dầu Gội Thảo Dược Cỏ Cây Hoa Lá Gừng Sả Hỗ Trợ Làm Dày Tóc, Làm Sạch Da Đầu 500g",
+      "bucket": "other",
+      "final": 248000,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mpu5zarl5se9db",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F24191239%2F19429977512&affiliate_id=17310760448&sub_id=flashsale",
       "price": 320000,
-      "final": 248000,
-      "rate": 23
+      "rate": 23,
+      "title": "Dầu Gội Thảo Dược Cỏ Cây Hoa Lá Gừng Sả Hỗ Trợ Làm Dày Tóc, Làm Sạch Da Đầu 500g"
     },
     {
-      "title": "Quần Thể Thao Lacoste Nữ Chất Liệu Cotton",
+      "bucket": "other",
+      "final": 239200,
+      "image": "https://cf.shopee.vn/file/vn-11134207-820l4-mhuboppbx24i0c",
+      "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F254672228%2F4057355464&affiliate_id=17310760448&sub_id=flashsale",
+      "price": 299000,
+      "rate": 20,
+      "title": "Mang Thai Sinh Nở Và Nuôi Con Khỏe Mạnh - Sách Thai Giáo Hay Dành Cho Mẹ Bầu"
+    },
+    {
+      "bucket": "other",
+      "final": 3640000,
       "image": "https://cf.shopee.vn/file/vn-11134275-7ras8-mc1o6d7xpxeya5",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F1479368280%2F40458142454&affiliate_id=17310760448&sub_id=flashsale",
       "price": 4550000,
-      "final": 3640000,
-      "rate": 20
+      "rate": 20,
+      "title": "Quần Thể Thao Lacoste Nữ Chất Liệu Cotton"
     },
     {
-      "title": "Sữa trái cây KUN vị dâu thùng 48 hộp x 180ml",
+      "bucket": "other",
+      "final": 335000,
+      "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mowswfg7n1u69c",
+      "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F795897302%2F18769555082&affiliate_id=17310760448&sub_id=flashsale",
+      "price": 409000,
+      "rate": 18,
+      "title": "Bộ sưu tập 6 hương nước hoa VERITES The An Epilogue In Scents 50ml"
+    },
+    {
+      "bucket": "other",
+      "final": 361560,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mq1gu3em4xdu28",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F410279164%2F22210795858&affiliate_id=17310760448&sub_id=flashsale",
       "price": 436000,
-      "final": 361560,
-      "rate": 17
+      "rate": 17,
+      "title": "Sữa trái cây KUN vị dâu thùng 48 hộp x 180ml"
     },
     {
-      "title": "Toner pad diếp cá làm dịu & tẩy tế bào chết Abib Heartleaf Spot Pad Calming Touch (80 miếng)",
+      "bucket": "other",
+      "final": 676000,
+      "image": "https://cf.shopee.vn/file/sg-11134201-824h6-mpyl9nhoei9ucf",
+      "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F1079273680%2F28468062016&affiliate_id=17310760448&sub_id=flashsale",
+      "price": 814000,
+      "rate": 17,
+      "title": "Kem dưỡng đa năng Elizabeth Arden Eight Hour Cream Skin Protectant 50ml"
+    },
+    {
+      "bucket": "other",
+      "final": 457000,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mpyc9tcfw1s0fb",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F1255924703%2F24180710313&affiliate_id=17310760448&sub_id=flashsale",
       "price": 531365,
-      "final": 457000,
-      "rate": 14
+      "rate": 14,
+      "title": "Toner pad diếp cá làm dịu & tẩy tế bào chết Abib Heartleaf Spot Pad Calming Touch (80 miếng)"
     },
     {
-      "title": "Sách - Từ Điển Anh Anh Việt Phiên Bản Bìa Mềm Màu Xanh - Giải Nghĩa Đầy Đủ Ví Dụ Phong Phú",
+      "bucket": "other",
+      "final": 214200,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-moq9uxv1kzya98",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F272432350%2F7741721920&affiliate_id=17310760448&sub_id=flashsale",
       "price": 238000,
-      "final": 214200,
-      "rate": 10
+      "rate": 10,
+      "title": "Sách - Từ Điển Anh Anh Việt Phiên Bản Bìa Mềm Màu Xanh - Giải Nghĩa Đầy Đủ Ví Dụ Phong Phú"
     },
     {
-      "title": "Sách - Giáo trình Hán Ngữ 6 cuốn (combo/ lẻ tuỳ chọn)",
+      "bucket": "other",
+      "final": 98100,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mopiwclyaex941",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F272432350%2F23828167603&affiliate_id=17310760448&sub_id=flashsale",
       "price": 109000,
-      "final": 98100,
-      "rate": 10
+      "rate": 10,
+      "title": "Sách - Giáo trình Hán Ngữ 6 cuốn (combo/ lẻ tuỳ chọn)"
     },
     {
-      "title": "[DEZUS] Áo Thun Cotton Unisex, Quần Suống Ống Rộng Thể Thao, Thoáng Mát, Mềm Mịn - ANTARAM – U1HW241206 + U4TW241202",
+      "bucket": "other",
+      "final": 306000,
+      "image": "https://cf.shopee.vn/file/vn-11134207-7ras8-m1zdkch6opzv02",
+      "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F395466446%2F29765998264&affiliate_id=17310760448&sub_id=flashsale",
+      "price": 340000,
+      "rate": 10,
+      "title": "Áo kiểu nữ trung niên, thiết kế thêu hoa tinh tế, chất liệu cao cấp tặng mẹ Thiều Hoa AN4Y0133"
+    },
+    {
+      "bucket": "other",
+      "final": 134100,
+      "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mp9dhkulv1tsb2",
+      "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F371367657%2F18989502528&affiliate_id=17310760448&sub_id=flashsale",
+      "price": 149000,
+      "rate": 10,
+      "title": "Sách Trọn Bộ Giáo Trình Destination Grammar & Vocabulary B1, B2, C1&C2 (Kèm Đáp Án) Lẻ/combo"
+    },
+    {
+      "bucket": "other",
+      "final": 821560,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mplocikltamm84",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F1691281155%2F44477833534&affiliate_id=17310760448&sub_id=flashsale",
       "price": 874000,
-      "final": 821560,
-      "rate": 6
+      "rate": 6,
+      "title": "[DEZUS] Áo Thun Cotton Unisex, Quần Suống Ống Rộng Thể Thao, Thoáng Mát, Mềm Mịn - ANTARAM – U1HW241206 + U4TW241202"
     },
     {
-      "title": "[FS] Máy Tính Casio FX-580VN X dành cho học sinh cấp 3 cấp 2 chuyên dụng cho phòng thi dành cho thi chuyển cấp đại học",
+      "bucket": "other",
+      "final": 869000,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mp2170dyltsdb9",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F140792708%2F4558727890&affiliate_id=17310760448&sub_id=flashsale",
       "price": 915000,
-      "final": 869000,
-      "rate": 5
+      "rate": 5,
+      "title": "[FS] Máy Tính Casio FX-580VN X dành cho học sinh cấp 3 cấp 2 chuyên dụng cho phòng thi dành cho thi chuyển cấp đại học"
     },
     {
-      "title": "Tinh chất dưỡng da Shiseido Ultimune Power Infusing 4.0 Serum 30ml",
+      "bucket": "other",
+      "final": 2045200,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mq1lqk5c7rpoc8",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F392896126%2F28175939824&affiliate_id=17310760448&sub_id=flashsale",
       "price": 2160000,
-      "final": 2045200,
-      "rate": 5
+      "rate": 5,
+      "title": "Tinh chất dưỡng da Shiseido Ultimune Power Infusing 4.0 Serum 30ml"
     },
     {
-      "title": "[MUA LÀ CÓ QUÀ] CB6 Sữa bột Aptamil Kid Cesarbiotik New Zealand số 3 - Synbiotic đặc chế",
+      "bucket": "other",
+      "final": 3950000,
       "image": "https://cf.shopee.vn/file/sg-11134201-824i9-mptn7if2a70s90",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F383731969%2F22613385283&affiliate_id=17310760448&sub_id=flashsale",
       "price": 4146000,
-      "final": 3950000,
-      "rate": 5
+      "rate": 5,
+      "title": "[MUA LÀ CÓ QUÀ] CB6 Sữa bột Aptamil Kid Cesarbiotik New Zealand số 3 - Synbiotic đặc chế"
     },
     {
-      "title": "Ốp lưng UNIQUE Samsung S26 Ultra S25 Ultra S24 Ultra S23 Ultra SLIMCASE - Không ố vàng, siêu mỏng, hỗ trợ sạc không dây",
+      "bucket": "other",
+      "final": 3619000,
+      "image": "https://cf.shopee.vn/file/vn-11134207-820l4-mijwd9tum5mq21",
+      "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F1044352529%2F51903434577&affiliate_id=17310760448&sub_id=flashsale",
+      "price": 3790000,
+      "rate": 5,
+      "title": "[NEW] Sạc dự phòng Anker Prime 20.100mAh 220W | 3 cổng 2C1A | Hỗ trợ màn hình & App | Dành cho Laptop, ịPhone - A110B"
+    },
+    {
+      "bucket": "other",
+      "final": 239000,
+      "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-mpu9eipusttsb1",
+      "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F894167234%2F19959562052&affiliate_id=17310760448&sub_id=flashsale",
+      "price": 250000,
+      "rate": 4,
+      "title": "[Hỏa Tốc] Thùng Nước Ngọt Giải Khát Có Gaz Pepsi Lon Xanh (320ml/lon hoặc 350ml/lon)"
+    },
+    {
+      "bucket": "other",
+      "final": 464630,
       "image": "https://cf.shopee.vn/file/vn-11134207-81ztc-ml73tidx7tvxfc",
       "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F694501550%2F28331711950&affiliate_id=17310760448&sub_id=flashsale",
       "price": 479000,
-      "final": 464630,
-      "rate": 3
+      "rate": 3,
+      "title": "Ốp lưng UNIQUE Samsung S26 Ultra S25 Ultra S24 Ultra S23 Ultra SLIMCASE - Không ố vàng, siêu mỏng, hỗ trợ sạc không dây"
+    },
+    {
+      "bucket": "other",
+      "final": 419040,
+      "image": "https://cf.shopee.vn/file/vn-11134207-820l4-mgzz8ijbw1sdd7",
+      "link": "https://s.shopee.vn/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fproduct%2F137252616%2F12205391852&affiliate_id=17310760448&sub_id=flashsale",
+      "price": 432000,
+      "rate": 3,
+      "title": "Bộ 4 Kem đánh răng SENSODYNE Repair & Protect Deep Repair 100g giúp phục hồi sâu và bảo vệ răng ê buốt"
     }
   ]
 }
