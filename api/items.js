@@ -6,11 +6,9 @@ export default async function handler(req, res) {
 
   const page  = req.query.page  || 1;
   const limit = req.query.limit || 50;
-  const type  = req.query.type  || 'datafeed';
 
-  const url = (type === 'top')
-    ? 'https://api.accesstrade.vn/v1/top_products?merchant=shopee'
-    : 'https://api.accesstrade.vn/v1/datafeeds?domain=shopee.vn&page=' + page + '&limit=' + limit;
+  // status_discount=true => chỉ lấy sản phẩm đang giảm giá
+  const url = 'https://api.accesstrade.vn/v1/datafeeds?domain=shopee.vn&status_discount=true&page=' + page + '&limit=' + limit;
 
   try {
     const r = await fetch(url, {
@@ -24,7 +22,6 @@ export default async function handler(req, res) {
       const disc  = Number(p.discount) || 0;
       let   rate  = Number(p.discount_rate) || 0;
 
-      // Tính giá sau giảm hợp lý (lọc giá trị vô lý kiểu "25đ")
       let final = price;
       if (disc > 0 && disc < price && disc >= price * 0.1) {
         final = disc;
@@ -43,7 +40,8 @@ export default async function handler(req, res) {
         final: final,
         rate:  (final < price ? rate : 0)
       };
-    });
+    })
+    .sort(function (a, b) { return b.rate - a.rate; }); // giảm nhiều nhất lên đầu
 
     return res.status(200).json({ products: products, total: raw.total || products.length, upstream: r.status });
   } catch (e) {
